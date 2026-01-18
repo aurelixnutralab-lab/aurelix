@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  /* 🌿 Brand Colors */
+  --color-primary: #1f4d2b; /* Dark green */
+  --color-primary-light: #eaf4ec; /* Light green bg */
+  --color-secondary: #6aa84f; /* Accent green */
+  --color-text-dark: #0f172a;
+  --color-text-muted: #64748b;
+
+  /* 🌈 Gradient */
+  --color-gradient-custom: linear-gradient(180deg, #f4fbf6 0%, #eaf4ec 100%);
+
+  /* ✨ Shadows */
+  --shadow-soft: 0px 10px 40px rgba(0, 0, 0, 0.08);
+
+  /* ✅ Font Family Variables */
+  --font-cormorant: "Cormorant Garamond", serif;
+  --font-inter: "Inter", sans-serif;
+
+  /* ✅ Default font family */
+  --font-sans: var(--font-inter);
+}
+
+.swiper {
+  width: 100% !important;
+}
+.swiper-autoheight .swiper-wrapper {
+  align-items: normal !important;
+  transition-property: transform, height;
+}
+.swiper-wrapper {
+  height: min-content !important;
+  gap: 32px !important;
+  .swiper-slide {
+    margin: 0 !important;
+  }
+}
+.swiper-slide {
+  height: auto !important;
+}
+/* Pagination dots color */
+.swiper-pagination-bullet {
+  background: #ccc !important; /* default (inactive) color */
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: blue !important; /* active color */
+}
+
+/* Add top margin */
+.swiper-pagination {
+  margin-top: 20px !important;
+  position: relative !important;
+}
