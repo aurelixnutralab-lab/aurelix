@@ -1,6 +1,7 @@
 import { Facebook, Twitter, Instagram, MapPin, Mail } from "lucide-react";
 import SectionWrapper from "../SectionWrapper/SectionWrapper";
 import Logo from "../Logo/Logo";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -14,12 +15,22 @@ function Footer() {
               {/* <div className="w-14 h-14 rounded-full border-2 border-white flex items-center justify-center mb-6">
                 <span className="text-xl">🌿</span>
               </div> */}
-              <Logo size="md" />
-
-              <div className="flex gap-4">
-                <SocialIcon icon={<Facebook size={18} />} />
-                <SocialIcon icon={<Twitter size={18} />} />
-                <SocialIcon icon={<Instagram size={18} />} />
+              <Link to="/">
+                <Logo size="md" />
+              </Link>
+              <p className="text-sm text-white/80">
+                Your trusted partner for a healthier, happier life through
+                premium herbal and wellness solutions.
+              </p>
+              <div>
+                <h3 className="text-lg font-semibold mb-2 capitalize">
+                  Follow us on:
+                </h3>
+                <div className="flex gap-4">
+                  <SocialIcon icon={<Facebook size={18} />} />
+                  <SocialIcon icon={<Twitter size={18} />} />
+                  <SocialIcon icon={<Instagram size={18} />} />
+                </div>
               </div>
             </div>
 
@@ -30,18 +41,20 @@ function Footer() {
               </h3>
               <ul className="space-y-3 text-sm text-white/80">
                 <li className="hover:text-white cursor-pointer transition">
-                  Home
+                  <Link to={"/"}>Home</Link>
                 </li>
                 <li className="hover:text-white cursor-pointer transition">
-                  About
+                  <Link to={"/about-us"}>About</Link>
                 </li>
                 <li className="hover:text-white cursor-pointer transition">
-                  Quality
+                  <Link to={"/quality"}>Quality</Link>
                 </li>
                 <li className="hover:text-white cursor-pointer transition">
-                  Contact us
+                  <Link to={"/network"}>Network</Link>
                 </li>
-                {/* <li className="hover:text-white cursor-pointer transition">Blog</li> */}
+                {/* <li className="hover:text-white cursor-pointer transition">
+                  <Link to={"/contact-us"}>Contact us</Link>
+                </li> */}
               </ul>
             </div>
 
@@ -52,19 +65,32 @@ function Footer() {
               </h3>
               <ul className="space-y-3 text-sm text-white/80">
                 <li className="hover:text-white cursor-pointer transition">
-                  Manufacturing Solutions
+                  <Link to={"/product/herbal-botanical-extract"}>
+                    Herbal & Botanical Extracts
+                  </Link>
                 </li>
                 <li className="hover:text-white cursor-pointer transition">
-                  Product listing
+                  <Link to={"/product/antioxidants-polyphenols"}>
+                    Antioxidants & Polyphenols
+                  </Link>
                 </li>
                 <li className="hover:text-white cursor-pointer transition">
-                  Product detail
+                  <Link to={"/product/carotenoids"}>
+                    Carotenoids & Natural Pigments
+                  </Link>
                 </li>
                 <li className="hover:text-white cursor-pointer transition">
-                  Quote Request Page
+                  <Link to={"/product/plant-powders"}>
+                    Fruit, Vegetable & Plant Powders
+                  </Link>
                 </li>
                 <li className="hover:text-white cursor-pointer transition">
-                  Comparison
+                  <Link to={"/product/mushrooms"}>Mushroom Extracts</Link>
+                </li>
+                <li className="hover:text-white cursor-pointer transition">
+                  <Link to={"/product/dietary-fibers"}>
+                    Dietary Fibers & Plant Gums
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -72,7 +98,7 @@ function Footer() {
             {/* Contact */}
             <div>
               <h3 className="text-lg font-semibold mb-4 capitalize">
-                Contact us
+                Contact Details
               </h3>
               <div className="space-y-4 text-sm text-white/80">
                 <div className="flex gap-3">
@@ -82,7 +108,13 @@ function Footer() {
 
                 <div className="flex gap-3 items-center">
                   <Mail size={18} />
-                  <p>contact@aurelix.com</p>
+                  {/* <p>info@aurelixnutralab.com</p> */}
+                  <a
+                    href="mailto:info@aurelixnutralab.com"
+                    className="hover:underline"
+                  >
+                    info@aurelixnutralab.com
+                  </a>
                 </div>
               </div>
             </div>

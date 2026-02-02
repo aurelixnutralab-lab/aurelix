@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { AppImages } from "../../assets/images/image";
 import CommonButton from "../common/CommonButton/CommonButton";
 
@@ -7,7 +8,7 @@ function HeroBanner() {
       <div className="flex justify-between flex-col lg:flex-row py-8 md:py-20  items-center gap-12">
         {/* Left Content */}
         <div className="w-[100%] lg:w-[60%] ">
-          <p className="text-sm font-semibold text-primary mb-4">
+          <p className="text-[18px] font-bold text-primary mb-4">
             Welcome to Aurelix
           </p>
 
@@ -23,8 +24,9 @@ function HeroBanner() {
             Your trusted partner for a healthier, happier life through premium
             herbal and wellness solutions.
           </p>
-
-          <CommonButton text="Shop Now" className="mt-4" />
+          <Link to="/about-us">
+            <CommonButton text="Explore" className="mt-4" />
+          </Link>
         </div>
 
         {/* Right Image */}

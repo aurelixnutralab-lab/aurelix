@@ -54,3 +54,17 @@
   margin-top: 20px !important;
   position: relative !important;
 }
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-corner {
+  border-radius: 50%;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f4d2b;
+  border-radius: 50px;
+}

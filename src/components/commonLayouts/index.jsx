@@ -16,7 +16,6 @@ export default function CommonLayout() {
 
       <div className="mt-auto layout-footer">
         <Footer />
-        {/* footer */}
       </div>
     </div>
   );
