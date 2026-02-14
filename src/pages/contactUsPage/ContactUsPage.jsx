@@ -79,14 +79,18 @@ export default function ContactUs() {
               {/* Phone */}
               <div className="flex gap-3 items-start">
                 <Phone size={22} className="text-primary mt-1" />
-                <div>
+                <div className="flex flex-col">
                   <p className="text-sm text-gray-500">Phone</p>
                   <a
                     href="tel:+919274799430"
                     className="text-gray-800 font-medium hover:text-primary hover:underline"
                   >
                     +91 92747 99430
-                    <br />
+                  </a>
+                  <a
+                    href="tel:+917490099430"
+                    className="text-gray-800 font-medium hover:text-primary hover:underline"
+                  >
                     +91 74900 99430
                   </a>
                 </div>
