@@ -84,6 +84,11 @@ import AurelixHub from "./AurelixHub.jpg";
 import Logo from "./Logo.svg";
 import WhiteLogo from "./WhiteLogo.svg";
 import banner from "./banner.jpg";
+import productBg2Image from "./productBg2Image.jpg";
+import productBg3Image from "./productBg3Image.jpg";
+import productBg4Image from "./productBg4Image.jpg";
+import productBg5Image from "./productBg5Image.jpg";
+import productBg6Image from "./productBg6Image.jpg";
 
 export const AppImages = {
   homePageHerobanner,
@@ -172,4 +177,9 @@ export const AppImages = {
   Logo,
   WhiteLogo,
   banner,
+  productBg2Image,
+  productBg3Image,
+  productBg4Image,
+  productBg5Image,
+  productBg6Image,
 };

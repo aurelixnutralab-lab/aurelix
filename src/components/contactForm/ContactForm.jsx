@@ -2,7 +2,9 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
-import { useEffect } from "react";
+import { PhoneInput } from "react-international-phone";
+import "react-international-phone/style.css";
+import "./contactForm.css";
 
 function ContactForm() {
   const contactSchema = Yup.object().shape({
@@ -16,6 +18,10 @@ function ContactForm() {
       .trim()
       .email("Invalid email address")
       .required("Email is required"),
+
+    phone: Yup.string()
+      // .required("Phone number is required")
+      .min(6, "Invalid phone number"),
 
     subject: Yup.string()
       .trim()
@@ -33,6 +39,7 @@ function ContactForm() {
   const initialValues = {
     name: "",
     email: "",
+    phone: "",
     subject: "",
     message: "",
   };
@@ -81,7 +88,7 @@ function ContactForm() {
         validationSchema={contactSchema}
         onSubmit={handleSubmit}
       >
-        {({ errors, touched, isSubmitting }) => (
+        {({ errors, touched, isSubmitting, setFieldValue }) => (
           <Form className="space-y-4">
             {/* Name, Email, Subject in a row for tablet only, stacked on mobile and desktop */}
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-1 gap-4">
@@ -132,6 +139,37 @@ function ContactForm() {
                 />
                 <ErrorMessage
                   name="email"
+                  component="p"
+                  className="text-red-500 text-xs mt-1"
+                />
+              </div>
+
+              {/* Phone Field */}
+              <div>
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  Phone
+                </label>
+
+                <PhoneInput
+                  defaultCountry="in"
+                  // value={values.phone}
+                  onChange={(phone) => setFieldValue("phone", phone)}
+                  inputProps={{
+                    name: "phone",
+                    required: true,
+                  }}
+                  className={`w-full h-[41px] ${
+                    errors.phone && touched.phone
+                      ? "border-red-500"
+                      : "border-gray-200"
+                  }`}
+                />
+
+                <ErrorMessage
+                  name="phone"
                   component="p"
                   className="text-red-500 text-xs mt-1"
                 />

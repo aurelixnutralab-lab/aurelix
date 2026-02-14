@@ -16,17 +16,20 @@ function SpecialIngrediantSection() {
           AYURVEDIC & ETHENIC
         </h2>
         <p className="mt-6 text-gray-600 lg:max-w-5xl text-center text-[20px]">
-          At Aurelix, we craft modern digital experiences that empower
-          businesses to grow and connect with their audience. Specializing in
-          scalable web solutions and intuitive user interfaces, we deliver
-          high-quality products built with performance, reliability, and design
-          excellence at their core.
+          At Aurelix, we specialize in manufacturing and supplying premium
+          Ayurvedic herbal extracts and botanical powders. Rooted in the rich
+          heritage of traditional Ayurveda, we combine ancient wisdom with
+          modern extraction technologies to deliver consistent, high-quality raw
+          materials for nutraceutical, pharmaceutical, cosmetic, and wellness
+          industries.
         </p>
         <p className="mt-6 text-gray-600 lg:max-w-5xl text-center text-[20px]">
-          Driven by innovation and precision, Aurelix focuses on transforming
-          ideas into impactful digital solutions. From concept to deployment, we
-          combine strategy, technology, and creativity to build platforms that
-          are efficient, adaptable, and future-ready.
+          With a strong focus on purity, standardization, and reliability,
+          Aurelix ensures every extract and powder meets stringent quality
+          standards. From ethically sourced herbs to advanced processing
+          methods, we maintain transparency and precision at every stage —
+          providing scalable, bulk solutions that empower brands to create
+          effective and authentic Ayurvedic formulations.
         </p>
         <div className="mt-18 w-[100%] flex justify-center gap-[50px] flex-wrap">
           <SpecialIngrediantCard

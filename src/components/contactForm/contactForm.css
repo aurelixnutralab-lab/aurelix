@@ -1,0 +1,13 @@
+.react-international-phone-input {
+  width: 100%;
+  background-color: #f8f8f8 !important;
+  height: 41px;
+}
+.react-international-phone-country-selector {
+  height: 41px;
+}
+
+.react-international-phone-country-selector-button {
+  padding: 0 5px !important;
+  background-color: #f8f8f8 !important;
+}

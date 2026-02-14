@@ -3,6 +3,8 @@ import ProductSmallCard from "../../components/ProductsComponents/ProductSmallCa
 import { useEffect, useState } from "react";
 import { ProductData } from "../../helpers/productData";
 import ProductModal from "../../components/ProductsComponents/ProductModal";
+import CommonButton from "../../components/common/CommonButton/CommonButton";
+import SectionWrapper from "../../components/common/SectionWrapper/SectionWrapper";
 
 function CategoryProductPage() {
   const { id } = useParams();
@@ -67,6 +69,30 @@ function CategoryProductPage() {
           }}
         />
       )}
+      <section className="bg-[#eaf4ec] w-full py-12 md:py-20">
+        <div className="w-[100%]">
+          <div className="flex flex-col gap-10 items-center">
+            <div className="w-full lg:w-3xl flex flex-col items-center justify-center">
+              <p className="text-[18px] font-bold text-primary tracking-wide mb-3">
+                Get In Touch
+              </p>
+
+              <h2
+                className="text-center text-3xl sm:text-4xl font-bold mb-[20px] text-gray-900"
+                style={{ fontFamily: "var(--font-cormorant)" }}
+              >
+                If you can’t find what you’re looking for, feel free to connect
+                with us directly.
+              </h2>
+              <CommonButton
+                text="Contact Us"
+                variant="primary"
+                onClick={() => navigate("/contact-us")}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

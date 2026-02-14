@@ -77,10 +77,10 @@ function ProductModal({ product, onClose }) {
                 {product.StandardizedGrade}
               </div>
 
-              <div className="text-sm">
+              {/* <div className="text-sm">
                 <span className="font-semibold">Analytical Method:</span>{" "}
                 {product.AnalyticalMethod}
-              </div>
+              </div> */}
 
               <p className="text-gray-700 text-sm leading-relaxed mt-2">
                 {product.Description}

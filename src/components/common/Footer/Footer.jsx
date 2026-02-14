@@ -1,4 +1,11 @@
-import { Facebook, Twitter, Instagram, MapPin, Mail } from "lucide-react";
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  MapPin,
+  Mail,
+  Phone,
+} from "lucide-react";
 import SectionWrapper from "../SectionWrapper/SectionWrapper";
 import Logo from "../Logo/Logo";
 import { Link } from "react-router-dom";
@@ -25,6 +32,27 @@ function Footer() {
               </p>
               <div>
                 <h3 className="text-lg font-semibold mb-2 capitalize">
+                  Our Group Of Companies
+                </h3>
+                <div className="flex gap-1 flex-col text-sm text-white/80">
+                  <a
+                    href="https://aurelixnutralab.com/"
+                    className="hover:underline"
+                    target="_blank"
+                  >
+                    Aurelix Nutra Labs Pvt. Ltd.
+                  </a>
+                  <a
+                    href="https://aurelixnutralab.com/"
+                    className="hover:underline"
+                    target="_blank"
+                  >
+                    Aurelix Nutra Labs Pvt. Ltd.
+                  </a>
+                </div>
+              </div>
+              {/* <div>
+                <h3 className="text-lg font-semibold mb-2 capitalize">
                   Follow us on:
                 </h3>
                 <div className="flex gap-4">
@@ -44,7 +72,7 @@ function Footer() {
                     label="Instagram"
                   />
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Quick Links */}
@@ -71,7 +99,7 @@ function Footer() {
             {/* Resources */}
             <div>
               <h3 className="text-lg font-semibold mb-4 capitalize">
-                Resources
+                Products
               </h3>
               <ul className="space-y-3 text-sm text-white/80">
                 <li className="hover:text-white cursor-pointer transition">
@@ -112,7 +140,7 @@ function Footer() {
               </h3>
               <div className="space-y-4 text-sm text-white/80">
                 <div className="flex gap-3">
-                  <MapPin size={20} />
+                  <MapPin size={26} />
                   <p>
                     FF-10, SEVENTH PARISUR, <br />
                     Shree Vishnudhara Gardens, Gota - Jagatpur Rd, <br /> Gota,
@@ -128,6 +156,18 @@ function Footer() {
                   >
                     info@aurelixnutralab.com
                   </a>
+                </div>
+
+                <div className="flex gap-3 items-center">
+                  <Phone size={20} />
+                  <div className="flex flex-col ">
+                    <a href="tel:+919274799430" className="hover:underline">
+                      +91 92747 99430
+                    </a>
+                    <a href="tel:+917490099430" className="hover:underline">
+                      +91 74900 99430
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

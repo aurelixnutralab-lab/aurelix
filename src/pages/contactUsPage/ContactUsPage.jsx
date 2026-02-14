@@ -86,6 +86,8 @@ export default function ContactUs() {
                     className="text-gray-800 font-medium hover:text-primary hover:underline"
                   >
                     +91 92747 99430
+                    <br />
+                    +91 74900 99430
                   </a>
                 </div>
               </div>
