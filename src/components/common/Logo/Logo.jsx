@@ -1,3 +1,5 @@
+import { AppImages } from "../../../assets/images/image";
+
 function Logo({ size = "md" }) {
   const isLarge = size === "lg";
 
@@ -15,7 +17,9 @@ function Logo({ size = "md" }) {
 
       {/* Brand Name (only for large logo) */}
       {isLarge && (
-        <span className="font-semibold text-xl text-primary">Aurelix</span>
+        <span className="font-semibold text-xl text-primary">
+          <img src={AppImages.Logo} />
+        </span>
       )}
     </div>
   );

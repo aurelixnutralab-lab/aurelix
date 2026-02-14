@@ -2,6 +2,7 @@ import { Facebook, Twitter, Instagram, MapPin, Mail } from "lucide-react";
 import SectionWrapper from "../SectionWrapper/SectionWrapper";
 import Logo from "../Logo/Logo";
 import { Link } from "react-router-dom";
+import { AppImages } from "../../../assets/images/image";
 
 function Footer() {
   return (
@@ -12,11 +13,11 @@ function Footer() {
           <div className=" py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
             {/* Logo + Social */}
             <div className="flex gap-5 flex-col">
-              {/* <div className="w-14 h-14 rounded-full border-2 border-white flex items-center justify-center mb-6">
-                <span className="text-xl">🌿</span>
-              </div> */}
-              <Link to="/">
-                <Logo size="md" />
+              <Link to="/" aria-label="Aurelix Home">
+                <img
+                  src={AppImages.WhiteLogo}
+                  className="w-[60%] max-w-[280px] md:min-w-0 md:w-[80%] lg:w-[90%]"
+                />
               </Link>
               <p className="text-sm text-white/80">
                 Your trusted partner for a healthier, happier life through
@@ -27,9 +28,21 @@ function Footer() {
                   Follow us on:
                 </h3>
                 <div className="flex gap-4">
-                  <SocialIcon icon={<Facebook size={18} />} />
-                  <SocialIcon icon={<Twitter size={18} />} />
-                  <SocialIcon icon={<Instagram size={18} />} />
+                  <SocialIcon
+                    icon={<Facebook size={18} />}
+                    href="https://facebook.com"
+                    label="Facebook"
+                  />
+                  <SocialIcon
+                    icon={<Twitter size={18} />}
+                    href="https://twitter.com"
+                    label="Twitter"
+                  />
+                  <SocialIcon
+                    icon={<Instagram size={18} />}
+                    href="https://instagram.com"
+                    label="Instagram"
+                  />
                 </div>
               </div>
             </div>
@@ -52,9 +65,6 @@ function Footer() {
                 <li className="hover:text-white cursor-pointer transition">
                   <Link to={"/network"}>Network</Link>
                 </li>
-                {/* <li className="hover:text-white cursor-pointer transition">
-                  <Link to={"/contact-us"}>Contact us</Link>
-                </li> */}
               </ul>
             </div>
 
@@ -102,13 +112,16 @@ function Footer() {
               </h3>
               <div className="space-y-4 text-sm text-white/80">
                 <div className="flex gap-3">
-                  <MapPin size={18} className="mt-1" />
-                  <p>Ahemedabad</p>
+                  <MapPin size={20} />
+                  <p>
+                    FF-10, SEVENTH PARISUR, <br />
+                    Shree Vishnudhara Gardens, Gota - Jagatpur Rd, <br /> Gota,
+                    Ahmedabad, Gujarat 382481
+                  </p>
                 </div>
 
                 <div className="flex gap-3 items-center">
-                  <Mail size={18} />
-                  {/* <p>info@aurelixnutralab.com</p> */}
+                  <Mail size={20} />
                   <a
                     href="mailto:info@aurelixnutralab.com"
                     className="hover:underline"
@@ -125,7 +138,7 @@ function Footer() {
 
           {/* Bottom */}
           <div className="py-4 text-center text-sm text-white/80">
-            Copyright © 2026 Aurelix
+            Copyright © 2026 Aurelix Nutra Labs
           </div>
         </div>
       </SectionWrapper>
@@ -135,10 +148,16 @@ function Footer() {
 
 export default Footer;
 
-function SocialIcon({ icon }) {
+function SocialIcon({ icon, href, label }) {
   return (
-    <div className="w-10 h-10 cursor-pointer rounded-full bg-white text-primary flex items-center justify-center hover:scale-110 transition">
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={label}
+      className="w-10 h-10 cursor-pointer rounded-full bg-white text-primary flex items-center justify-center hover:scale-110 transition"
+    >
       {icon}
-    </div>
+    </a>
   );
 }

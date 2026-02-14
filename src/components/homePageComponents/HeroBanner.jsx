@@ -36,6 +36,8 @@ function HeroBanner() {
             alt="Wellness Products"
             className="w-full max-w-[400px] rounded-lg drop-shadow-lg"
             style={{ filter: "drop-shadow(var(--shadow-soft))" }}
+            loading="eager"
+            fetchpriority="high"
           />
         </div>
       </div>

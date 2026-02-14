@@ -1,15 +1,17 @@
+import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import CommonLayout from "./components/commonLayouts";
-import HomePage from "./pages/homePage/HomePage";
-import CategoryProductPage from "./pages/CategoryProductPage/CategoryProductPage";
-import AboutUsPage from "./pages/aboutUsPage/AboutUsPage";
-import OurQualityPage from "./pages/ourQualityPage/OurQualityPage";
-import OurNetworkPage from "./pages/ourNetworkPage/OurNetworkPage";
-import ContactUs from "./pages/contactUsPage/ContactUsPage";
+
+const HomePage = lazy(() => import("./pages/homePage/HomePage"));
+const CategoryProductPage = lazy(() => import("./pages/CategoryProductPage/CategoryProductPage"));
+const AboutUsPage = lazy(() => import("./pages/aboutUsPage/AboutUsPage"));
+const OurQualityPage = lazy(() => import("./pages/ourQualityPage/OurQualityPage"));
+const OurNetworkPage = lazy(() => import("./pages/ourNetworkPage/OurNetworkPage"));
+const ContactUs = lazy(() => import("./pages/contactUsPage/ContactUsPage"));
 
 function AppRoutes() {
   return (
-    <>
+    <Suspense fallback={<div className="h-screen w-full flex items-center justify-center">Loading...</div>}>
       <Routes>
         <Route element={<CommonLayout />}>
           <Route path="/" element={<HomePage />} />
@@ -21,7 +23,7 @@ function AppRoutes() {
         </Route>
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
-    </>
+    </Suspense>
   );
 }
 

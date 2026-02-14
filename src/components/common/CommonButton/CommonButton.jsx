@@ -6,7 +6,7 @@ function CommonButton({
   className = "",
 }) {
   const baseStyles =
-    "inline-flex cursor-pointer items-center justify-center px-6 py-2 rounded-full text-sm font-medium transition-colors duration-300 focus:outline-none";
+    "inline-flex text-nowrap cursor-pointer items-center justify-center px-6 py-2 rounded-full text-sm font-medium transition-colors duration-300 focus:outline-none";
 
   const variants = {
     primary:

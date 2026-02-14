@@ -61,7 +61,7 @@ function OurNetworkPage() {
         <div className="max-w-6xl mx-auto px-6 flex flex-col-reverse lg:flex-row gap-10 items-center">
           <div className="flex justify-center w-[100%] lg:w-[50%]">
             <img
-              src={AppImages.AboutNutraImg}
+              src={AppImages.AurelixHub}
               alt="Ahmedabad Hub"
               className="rounded-xl shadow-md max-h-[350px] md:max-h-[450px] w-[100%] object-cover"
             />

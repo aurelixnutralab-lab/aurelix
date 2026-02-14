@@ -39,6 +39,7 @@ function ProductCard() {
                 src={card.image}
                 alt={card.title}
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
 
@@ -54,11 +55,6 @@ function ProductCard() {
               <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
                 {card.description}
               </p>
-
-              {/* Button */}
-              {/* <button className="self-start bg-green-900 text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-green-800 transition">
-                View details
-              </button> */}
             </div>
           </div>
         ))}

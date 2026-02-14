@@ -7,6 +7,7 @@ function SpecialIngrediantCard({ image, title, description }) {
           src={image}
           alt={title}
           className="w-24 h-24 rounded-full object-cover"
+          loading="lazy"
         />
       </div>
 

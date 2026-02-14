@@ -27,33 +27,6 @@ function ProductModal({ product, onClose }) {
         className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative animate-scaleIn"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* <button
-          onClick={() => {
-            navigator.clipboard.writeText(window.location.href);
-            setIsCopied(true);
-            setTimeout(() => {
-              setIsCopied(false);
-            }, 2000);
-          }}
-          className="absolute top-2 right-2 text-gray-500 hover:text-black z-10"
-        >
-          {isCopied ? (
-            // <p className="bg-white px-5 rounded-full">Link Copied!</p>
-            <CommonButton
-              text="Link Copied!"
-              variant="primary"
-              // onClick={() => navigate("/contact-us")}
-            />
-          ) : (
-            // <Copy size={22} className="cursor-pointer" />
-            <CommonButton
-              text="Copy Link"
-              variant="primary"
-              // onClick={() => navigate("/contact-us")}
-            />
-          )}
-        </button> */}
-
         <div className="grid md:grid-cols-2 gap-6 p-6 mt-5 md:mt-0">
           {/* Image */}
           <div className="w-full  md:sticky md:top-6 self-start">

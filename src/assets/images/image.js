@@ -80,6 +80,10 @@ import OatBetGlucan from "./OatBetGlucan.jpg";
 import OurPhilosophy from "./OurPhilosophy.jpg";
 import OurQuality from "./OurQuality.jpg";
 import OurGlobal from "./OurGlobal.jpg";
+import AurelixHub from "./AurelixHub.jpg";
+import Logo from "./Logo.svg";
+import WhiteLogo from "./WhiteLogo.svg";
+import banner from "./banner.jpg";
 
 export const AppImages = {
   homePageHerobanner,
@@ -164,4 +168,8 @@ export const AppImages = {
   OurPhilosophy,
   OurQuality,
   OurGlobal,
+  AurelixHub,
+  Logo,
+  WhiteLogo,
+  banner,
 };

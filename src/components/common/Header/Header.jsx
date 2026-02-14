@@ -5,6 +5,7 @@ import CommonButton from "../CommonButton/CommonButton";
 import SectionWrapper from "../SectionWrapper/SectionWrapper";
 import Logo from "../Logo/Logo";
 import { useLocation } from "react-router-dom";
+import { AppImages } from "../../../assets/images/image";
 
 /* -------------------- MENU DATA -------------------- */
 const productLinks = [
@@ -57,11 +58,15 @@ function Header() {
         <div className="w-full py-5 flex items-center justify-between gap-[20px]">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="hidden md:block">
+            {/* <Link to="/" className="hidden md:block" aria-label="Aurelix Home">
               <Logo size="lg" />
-            </Link>
-            <Link to="/" className="md:hidden">
-              <Logo size="sm" />
+            </Link> */}
+            <Link to="/" className="" aria-label="Aurelix Home">
+              {/* <Logo size="sm" /> */}
+              <img
+                src={AppImages.Logo}
+                className="min-w-[130px] sm:min-w-[180px] lg:min-w-[210px]"
+              />
             </Link>
           </div>
 
@@ -80,12 +85,17 @@ function Header() {
               onMouseEnter={() => setActiveDropdown("products")}
               onMouseLeave={() => setActiveDropdown(null)}
             >
-              <div className="px-3 py-2 rounded-md cursor-pointer hover:bg-primary-light hover:text-primary transition flex items-center gap-1">
+              <div
+                className="px-3 py-2 rounded-md cursor-pointer hover:bg-primary-light hover:text-primary transition flex items-center gap-1"
+                aria-haspopup="true"
+                aria-expanded={activeDropdown === "products"}
+              >
                 Products
                 <span
                   className={`transition ${
                     activeDropdown === "products" ? "rotate-180" : ""
                   }`}
+                  aria-hidden="true"
                 >
                   <ChevronDown className="text-[14px]" />
                 </span>
@@ -138,6 +148,8 @@ function Header() {
             <button
               onClick={() => setMenuOpen(!menuOpen)}
               className="lg:hidden flex flex-col gap-1"
+              aria-label="Toggle Mobile Menu"
+              aria-expanded={menuOpen}
             >
               {[1, 2, 3].map((i) => (
                 <span key={i} className="w-5 h-0.5 bg-primary"></span>
@@ -163,12 +175,14 @@ function Header() {
               <button
                 onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
                 className="w-full flex items-center justify-between text-gray-700"
+                aria-expanded={mobileProductsOpen}
               >
                 Products
                 <span
                   className={`transition-transform ${
                     mobileProductsOpen ? "rotate-180" : ""
                   }`}
+                  aria-hidden="true"
                 >
                   <ChevronDown className="text-[14px]" />
                 </span>

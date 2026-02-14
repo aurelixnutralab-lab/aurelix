@@ -1,8 +1,3 @@
-// function AboutNutra() {
-//   return <div className="flex items-center gap-3">about nutra</div>;
-// }
-
-// export default AboutNutra;
 import { AppImages } from "../../assets/images/image";
 import SectionWrapper from "../common/SectionWrapper/SectionWrapper";
 
@@ -18,6 +13,7 @@ function AboutNutra() {
                 src={AppImages.AboutNutraImg}
                 alt="Natural Health Ingredients"
                 className="w-full h-auto max-h-[500px] rounded-xl object-cover shadow-lg"
+                loading="lazy"
               />
             </div>
 
