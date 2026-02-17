@@ -36,19 +36,13 @@ function Footer() {
                 </h3>
                 <div className="flex gap-1 flex-col text-sm text-white/80">
                   <a
-                    href="https://aurelixnutralab.com/"
+                    href="https://mevadaenterprise.com/"
                     className="hover:underline"
                     target="_blank"
                   >
-                    Aurelix Nutra Labs Pvt. Ltd.
+                    ★ Mevada Enterprise
                   </a>
-                  <a
-                    href="https://aurelixnutralab.com/"
-                    className="hover:underline"
-                    target="_blank"
-                  >
-                    Aurelix Nutra Labs Pvt. Ltd.
-                  </a>
+                  <p>(Batch coding and packing machine manufacturer)</p>
                 </div>
               </div>
               {/* <div>
