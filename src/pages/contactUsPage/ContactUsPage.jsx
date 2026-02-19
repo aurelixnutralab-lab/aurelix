@@ -2,8 +2,9 @@
 //   return <div className="flex items-center gap-3">about nutra</div>;
 // }
 
-import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import { Clock, Factory, Mail, MapPin, Phone } from "lucide-react";
 import ContactForm from "../../components/contactForm/ContactForm";
+import CommonButton from "../../components/common/CommonButton/CommonButton";
 
 export default function ContactUs() {
   return (
@@ -63,16 +64,31 @@ export default function ContactUs() {
             </div> */}
             <div className="space-y-6">
               {/* Address */}
-              <div className="flex gap-3 items-start">
-                <MapPin size={22} className="text-primary mt-1" />
-                <div>
-                  <p className="text-sm text-gray-500">Address</p>
-                  <p className="text-gray-800 font-medium">
-                    Aurelix Nutra Labs <br />
-                    FF-10, SEVENTH PARISUR, <br />
-                    Shree Vishnudhara Gardens, Gota - Jagatpur Rd, <br />
-                    Gota, Ahmedabad, Gujarat 382481
-                  </p>
+
+              <div className="flex flex-col gap-3 items-start">
+                <div className="flex gap-3 items-start">
+                  <MapPin size={22} className="text-primary mt-1" />
+                  <div>
+                    <p className="text-sm text-gray-500">Address</p>
+                    <p className="text-gray-800 font-medium">
+                      Aurelix Nutra Labs <br />
+                      FF-10, SEVENTH PARISUR, <br />
+                      Shree Vishnudhara Gardens, Gota - Jagatpur Rd, <br />
+                      Gota, Ahmedabad, Gujarat 382481
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-3 items-start">
+                  <Factory size={22} className="text-primary mt-1" />
+                  <div>
+                    <p className="text-sm text-gray-500">Manufacturing Unit</p>
+                    <p className="text-gray-800 font-medium">
+                      7 Devashray Arcade and Industrial Estate,
+                      <br /> Near Hathijan (Lal Gebi) Circle, <br />
+                      Sardar Patel Ring Rd,
+                      <br /> Hathijan, Ahmedabad, Gujarat 382445
+                    </p>
+                  </div>
                 </div>
               </div>
 
@@ -120,6 +136,19 @@ export default function ContactUs() {
                   </p>
                 </div>
               </div>
+
+              {/* <div>
+                <a
+                  href={window.location.origin + "/broucher.pdf"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <CommonButton
+                    text="Checkout Products Broucher"
+                    variant="primary"
+                  ></CommonButton>
+                </a>
+              </div> */}
             </div>
           </div>
 

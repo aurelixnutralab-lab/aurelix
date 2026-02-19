@@ -44,6 +44,10 @@ function Footer() {
                   </a>
                   <p>(Batch coding and packing machine manufacturer)</p>
                 </div>
+                <div className="flex gap-1 flex-col text-sm text-white/80">
+                  <span>★ Jeniks print pack</span>
+                  <p>(Ink and cartridge solutions)</p>
+                </div>
               </div>
               {/* <div>
                 <h3 className="text-lg font-semibold mb-2 capitalize">

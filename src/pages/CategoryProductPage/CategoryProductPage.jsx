@@ -22,7 +22,7 @@ function CategoryProductPage() {
   }
 
   return (
-    <div className="flex flex-col items-center gap-3 w-full">
+    <div className="flex flex-col items-center  w-full">
       <div className="relative w-full">
         <img
           src={categoryData.bannerImg}
@@ -47,6 +47,20 @@ function CategoryProductPage() {
           {categoryData.title}
         </h3>
       </div>
+
+      <div className="bg-[#eaf4ec] w-full py-5 flex justify-center items-center">
+        <a
+          href={window.location.origin + "/broucher.pdf"}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <CommonButton
+            text="Checkout Products Broucher"
+            variant="primary"
+          ></CommonButton>
+        </a>
+      </div>
+
       <div className="p-[16px] md:p-20 flex flex-wrap gap-8 justify-center w-full">
         {categoryData.data.map((item) => (
           <ProductSmallCard
